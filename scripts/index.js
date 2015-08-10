@@ -103,13 +103,13 @@ var key_mappings = Array.apply(null, new Array(100)).map(Number.prototype.valueO
     var lcd_ctx;
     $(function() {
         lcd_ctx = document.getElementById("screen").getContext("2d");
-         window.addEventListener('touchstart',function(e) {
+         $(window).on('touchstart',function(e) {
             if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
                OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
            }
        });
 
-        window.addEventListener('touchend',function(e) {
+        $(window).on('touchend',function(e) {
            if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
                OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
            }
