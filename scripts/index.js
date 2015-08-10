@@ -1,7 +1,7 @@
 
 require.config({
     paths: {
-        'z80e': '../tools/z80e'
+        'z80e': 'tools/z80e'
     },
     shim: {
         'z80e': {

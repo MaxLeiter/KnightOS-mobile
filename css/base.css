@@ -48,9 +48,6 @@ a {color:#39B3D7}
 
 /* hero section on index */
 #hero {
-    background-image: url('/img/screenshotbanner-blurred.png');
-    background-position:center;
-    background-repeat:repeat;
     padding-top:20px;
     position:relative;
     margin-bottom:20px;
@@ -278,7 +275,7 @@ a {color:#39B3D7}
 
 
 .calculator {
-    background: url("/img/skin_full.png") no-repeat scroll 0% 0% transparent;
+    background: url("img/skin_full.png") no-repeat scroll 0% 0% transparent;
     background-size: 290px;
     height: 722px;
     margin: 0px auto;
