@@ -275,7 +275,7 @@ a {color:#39B3D7}
 
 
 .calculator {
-    background: url("img/skin_full.png") no-repeat scroll 0% 0% transparent;
+    background: url("../img/skin_full.png") no-repeat scroll 0% 0% transparent;
     background-size: 290px;
     height: 722px;
     margin: 0px auto;
