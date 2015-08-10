@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/keypad.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="col col-md-3">
+        <div class="calculator">
+            <canvas width="384" height="256" id="screen"></canvas>
+            <div id="keypad">
+                <a href="#"><img id="btn_0x41" class="btn_key" src="/img/keypad/btn_1.png"/></a>
+                <a href="#"><img id="btn_0x31" class="btn_key" src="/img/keypad/btn_2.png"/></a>
+                <a href="#"><img id="btn_0x21" class="btn_key" src="/img/keypad/btn_3.png"/></a>
+                <a href="#"><img id="btn_0x42" class="btn_key" src="/img/keypad/btn_4.png"/></a>
+                <a href="#"><img id="btn_0x32" class="btn_key" src="/img/keypad/btn_5.png"/></a>
+                <a href="#"><img id="btn_0x22" class="btn_key" src="/img/keypad/btn_6.png"/></a>
+                <a href="#"><img id="btn_0x43" class="btn_key" src="/img/keypad/btn_7.png"/></a>
+                <a href="#"><img id="btn_0x33" class="btn_key" src="/img/keypad/btn_8.png"/></a>
+                <a href="#"><img id="btn_0x23" class="btn_key" src="/img/keypad/btn_9.png"/></a>
+                <a href="#"><img id="btn_0x40" class="btn_key" src="/img/keypad/btn_0.png"/></a>
+                <a href="#"><img id="btn_0x30" class="btn_key" src="/img/keypad/btn_dot.png"/></a>
+                <a href="#"><img id="btn_0x20" class="btn_key" src="/img/keypad/btn_dash.png"/></a>
+                <a href="#"><img id="btn_0x10" class="btn_key" src="/img/keypad/btn_enter.png"/></a>
+                <a href="#"><img id="btn_0x11" class="btn_key" src="/img/keypad/btn_add.png"/></a>
+                <a href="#"><img id="btn_0x12" class="btn_key" src="/img/keypad/btn_min.png"/></a>
+                <a href="#"><img id="btn_0x13" class="btn_key" src="/img/keypad/btn_mul.png"/></a>
+                <a href="#"><img id="btn_0x14" class="btn_key" src="/img/keypad/btn_div.png"/></a>
+                <a href="#"><img id="btn_0x05" class="btn_key" src="/img/keypad/btn_on.png"/></a>
+                <a href="#"><img id="btn_0x51" class="btn_key" src="/img/keypad/btn_sto.png"/></a>
+                <a href="#"><img id="btn_0x52" class="btn_key" src="/img/keypad/btn_ln.png"/></a>
+                <a href="#"><img id="btn_0x53" class="btn_key" src="/img/keypad/btn_log.png"/></a>
+                <a href="#"><img id="btn_0x54" class="btn_key" src="/img/keypad/btn_square.png"/></a>
+                <a href="#"><img id="btn_0x44" class="btn_key" src="/img/keypad/btn_comma.png"/></a>
+                <a href="#"><img id="btn_0x34" class="btn_key" src="/img/keypad/btn_left_parenthesis.png"/></a>
+                <a href="#"><img id="btn_0x24" class="btn_key" src="/img/keypad/btn_right_parenthesis.png"/></a>
+                <a href="#"><img id="btn_0x55" class="btn_key" src="/img/keypad/btn_inverse.png"/></a>
+                <a href="#"><img id="btn_0x45" class="btn_key" src="/img/keypad/btn_sin.png"/></a>
+                <a href="#"><img id="btn_0x35" class="btn_key" src="/img/keypad/btn_cos.png"/></a>
+                <a href="#"><img id="btn_0x25" class="btn_key" src="/img/keypad/btn_tan.png"/></a>
+                <a href="#"><img id="btn_0x15" class="btn_key" src="/img/keypad/btn_pow.png"/></a>
+                <a href="#"><img id="btn_0x56" class="btn_key" src="/img/keypad/btn_math.png"/></a>
+                <a href="#"><img id="btn_0x46" class="btn_key" src="/img/keypad/btn_apps.png"/></a>
+                <a href="#"><img id="btn_0x36" class="btn_key" src="/img/keypad/btn_prgm.png"/></a>
+                <a href="#"><img id="btn_0x26" class="btn_key" src="/img/keypad/btn_vars.png"/></a>
+                <a href="#"><img id="btn_0x16" class="btn_key" src="/img/keypad/btn_clear.png"/></a>
+                <a href="#"><img id="btn_0x57" class="btn_key" src="/img/keypad/btn_alpha.png"/></a>
+                <a href="#"><img id="btn_0x47" class="btn_key" src="/img/keypad/btn_x.png"/></a>
+                <a href="#"><img id="btn_0x37" class="btn_key" src="/img/keypad/btn_stat.png"/></a>
+                <a href="#"><img id="btn_0x65" class="btn_key" src="/img/keypad/btn_2nd.png"/></a>
+                <a href="#"><img id="btn_0x66" class="btn_key" src="/img/keypad/btn_mode.png"/></a>
+                <a href="#"><img id="btn_0x67" class="btn_key" src="/img/keypad/btn_del.png"/></a>
+                <a href="#"><img id="btn_0x03" class="btn_key" src="/img/keypad/btn_arrow_up.png"/></a>
+                <a href="#"><img id="btn_0x00" class="btn_key" src="/img/keypad/btn_arrow_down.png"/></a>
+                <a href="#"><img id="btn_0x01" class="btn_key" src="/img/keypad/btn_arrow_left.png"/></a>
+                <a href="#"><img id="btn_0x02" class="btn_key" src="/img/keypad/btn_arrow_right.png"/></a>
+                <a href="#"><img id="btn_0x64" class="btn_key" src="/img/keypad/btn_y.png"/></a>
+                <a href="#"><img id="btn_0x63" class="btn_key" src="/img/keypad/btn_window.png"/></a>
+                <a href="#"><img id="btn_0x62" class="btn_key" src="/img/keypad/btn_zoom.png"/></a>
+                <a href="#"><img id="btn_0x61" class="btn_key" src="/img/keypad/btn_trace.png"/></a>
+                <a href="#"><img id="btn_0x60" class="btn_key" src="/img/keypad/btn_graph.png"/></a>
+            </div>
+        </div>
+    </div>
+    <script data-main="scripts/index.js" src="http://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+</body>
+</html>
