@@ -10,38 +10,12 @@
     <link rel="stylesheet" href="css/keypad.css">
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="onLoad()">
-<script>
-    var httpd = null;
-    function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-    function onDeviceReady() {
-        httpd = ( cordova && cordova.plugins && cordova.plugins.CorHttpd ) ? cordova.plugins.CorHttpd : null;
+<body>
 
-        startServer("");
-    }
-
-    function startServer(wwwroot) {
-        if ( httpd ) {
-            httpd.getURL(function(url){
-                if(url.length > 0) {
-                } else {
-                    httpd.startServer({
-                        'www_root' : wwwroot,
-                        'port' : 8080
-                    }
-                }
-            },function(){});
-        } else {
-            alert('CorHttpd plugin not available/ready.');
-        }
-    }
-
-    </script>
   <div class="col col-md-3">
         <div class="calculator">
             <canvas width="384" height="256" id="screen"></canvas>
