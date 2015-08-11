@@ -115,6 +115,31 @@ var key_mappings = Array.apply(null, new Array(100)).map(Number.prototype.valueO
            }
        });
 
+        $(window).on('keydown', function(e) {
+            if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
+                e.preventDefault();
+                OpenTI.current_asic.hardware.Keyboard.press(key_mappings[e.keyCode]);
+            }
+        });
+
+        $(window).on('keyup', function(e) {
+            if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
+                e.preventDefault();
+                OpenTI.current_asic.hardware.Keyboard.release(key_mappings[e.keyCode]);
+            }
+        });
+
+        $(window).on('mousedown',function(e) {
+           if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+               OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
+           }
+        });
+
+        $(window).on('mouseup',function(e) {
+           if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+               OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
+           }
+        });
     });
 
 var exec;
