@@ -101,46 +101,45 @@ var key_mappings = Array.apply(null, new Array(100)).map(Number.prototype.valueO
     key_mappings[57] = 0x23; // 9
 
     var lcd_ctx;
-    $(function() {
-        lcd_ctx = document.getElementById("screen").getContext("2d");
-         $(window).on('touchstart',function(e) {
-            if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
-               OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
-           }
-       });
+    lcd_ctx = document.getElementById("screen").getContext("2d");
+    window.addEventListener('touchstart',function(e) {
+        if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+         OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
+     }
+ });
 
-        $(window).on('touchend',function(e) {
-           if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
-               OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
-           }
-       });
+    window.addEventListener('touchend',function(e) {
+     if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+         OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
+     }
+ });
 
-        $(window).on('keydown', function(e) {
-            if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
-                e.preventDefault();
-                OpenTI.current_asic.hardware.Keyboard.press(key_mappings[e.keyCode]);
-            }
-        });
-
-        $(window).on('keyup', function(e) {
-            if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
-                e.preventDefault();
-                OpenTI.current_asic.hardware.Keyboard.release(key_mappings[e.keyCode]);
-            }
-        });
-
-        $(window).on('mousedown',function(e) {
-           if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
-               OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
-           }
-        });
-
-        $(window).on('mouseup',function(e) {
-           if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
-               OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
-           }
-        });
+    window.addEventListener('keydown', function(e) {
+        if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
+            e.preventDefault();
+            OpenTI.current_asic.hardware.Keyboard.press(key_mappings[e.keyCode]);
+        }
     });
+
+    window.addEventListener('keyup', function(e) {
+        if (e.keyCode <= key_mappings.length && key_mappings[e.keyCode] !== -1) {
+            e.preventDefault();
+            OpenTI.current_asic.hardware.Keyboard.release(key_mappings[e.keyCode]);
+        }
+    });
+
+    window.addEventListener('mousedown',function(e) {
+     if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+         OpenTI.current_asic.hardware.Keyboard.press(e.target.id.substring(4));
+     }
+ });
+
+    window.addEventListener('mouseup',function(e) {
+     if(e.target.hasAttribute('id') && e.target.id.indexOf('btn_') != -1){
+         OpenTI.current_asic.hardware.Keyboard.release(e.target.id.substring(4));
+     }
+ });
+
 
 var exec;
 
